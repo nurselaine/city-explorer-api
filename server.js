@@ -32,7 +32,7 @@ app.get(`/weather`, (request, response) => {
   const lon = request.query.lon;
   const city = request.query.searchQuery;
 
-  let validatedData = weatherData.find(obj => obj.city_name === city || (lat === obj.lat && lon === obj.lon));
+  let validatedData = weatherData.find(obj => obj.city_name.toLowerCase() === city.toLowerCase() || (lat === obj.lat && lon === obj.lon));
   validatedData.data.forEach(obj => {
     results.push(
       new Forecast(obj)
