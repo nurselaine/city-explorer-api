@@ -28,22 +28,22 @@ Actual time needed to complete: 30 min
 
 Name of feature: Set up weather data
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: Create weather info on server and render on front-end
 
-Start time: _____
+Start time: 5:0pm
 
-Finish time: _____
+Finish time: 10:45
 
-Actual time needed to complete: _____
+Actual time needed to complete: 3.5 hours
 
-Name of feature: ________________________________
+Name of feature: Create Error messages 
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1hr
 
-Start time: _____
+Start time: 11:00pm
 
-Finish time: _____
+Finish time: 11;11pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 11min
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
