@@ -2,6 +2,7 @@
 
 const { response, request } = require('express');
 const express = require('express'); // create instance of express
+const axios = require('axios');
 const weatherData = require('./data/weather.json');
 const cors = require('cors');
 require('dotenv').config(); // import dotenv 
