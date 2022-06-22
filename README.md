@@ -47,3 +47,12 @@ Finish time: 11;11pm
 Actual time needed to complete: 11min
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+
+## Credit & Collaborations
+1. Matthew Larkin - WRRCA Model
+
+![WRRCA Model](./public/My%20First%20Board.jpg)
+
+2. KC Hofstetter - WRRCA Model 2.0
+
+![WRRCA Model](./public/WRRC2.0.jpg)
