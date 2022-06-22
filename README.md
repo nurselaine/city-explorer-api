@@ -45,6 +45,15 @@ Start time: 11:00pm
 Finish time: 11;11pm
 
 Actual time needed to complete: 11min
+Name of feature: Request Data from Weather API
+
+Estimate of time needed to complete: 2hr
+
+Start time: 1:30pm
+
+Finish time: 
+
+Actual time needed to complete: 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
@@ -56,3 +65,7 @@ Actual time needed to complete: 11min
 2. KC Hofstetter - WRRCA Model 2.0
 
 ![WRRCA Model](./public/WRRC2.0.jpg)
+
+3. Falashade Greene - WRRCA Model 3.0
+
+![WRRCA Model](./WRRCA3.0.pdf)
