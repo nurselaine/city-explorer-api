@@ -45,27 +45,48 @@ Start time: 11:00pm
 Finish time: 11;11pm
 
 Actual time needed to complete: 11min
-Name of feature: Request Data from Weather API
+
+## Name of feature: Request Data from Weather API
 
 Estimate of time needed to complete: 2hr
 
 Start time: 1:30pm
 
-Finish time: 
+Finish time: 4:00pm
 
-Actual time needed to complete: 
+Actual time needed to complete: 2.5hr
+
+## Name of feature: Display movie data on Front-end
+
+Estimate of time needed to complete: 2hr
+
+Start time: 4:30pm
+
+Finish time: 10:30
+
+Actual time needed to complete: 1hr
+
+## Name of feature: Deploy site
+Estimate of time needed to complete: 30 min
+
+Start time: 10:30
+
+Finish time: 10:50
+
+Actual time needed to complete: 20 min
+
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
 ## Credit & Collaborations
 1. Matthew Larkin - WRRCA Model
 
-![WRRCA Model](./public/My%20First%20Board.jpg)
+![WRRCA Model](./my-first-board.jpg)
 
 2. KC Hofstetter - WRRCA Model 2.0
 
-![WRRCA Model](./public/WRRC2.0.jpg)
+![WRRCA Model](./WWRC2.jpg)
 
 3. Falashade Greene - WRRCA Model 3.0
 
-![WRRCA Model](./WRRCA3.0.pdf)
+![WRRCA Model](./my-first-board.jpg)
