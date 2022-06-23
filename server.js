@@ -13,8 +13,8 @@ const PORT = process.env.PORT || 3002; // check to make sure working on correct 
 
 const app = express();
 app.use(cors());
-let getWeather = require('./weather');
-let getMovies = require('./movies');
+let getWeather = require('./modules/weather');
+let getMovies = require('./modules/movies');
 
 // ******************  ROUTES   *************************
 
@@ -22,7 +22,14 @@ app.get('/', (request,response) => {
   response.send(`hello ${PORT}`);
 })
 
-app.get(`/weather`, getWeather);
+const getTest = (request, response, next) => {
+  console.log("hey");
+  return "hi"
+}
+
+app.get('/test', getTest)
+
+app.get('/weather', getWeather);
 
 app.get('/movies', getMovies);
 
@@ -33,12 +40,6 @@ app.get('*', (request, response) => {
 });
 
 // ************************ CLASSES **************** 
-// class Forecast{
-//   constructor(obj){
-//     this.description = `Low of ${obj.low_temp}, high of ${obj.high_temp} with ${obj.weather.description}`;
-//     this.date = obj.datetime;
-//   }
-// }
 
 class Error{
   constructor(message, code){

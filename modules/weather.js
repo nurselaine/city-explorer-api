@@ -7,7 +7,8 @@ const app = express();
 app.use(cors());
 
 
-const getWeather = (error, request, response, next) => {
+const getWeather = (request, response, next) => {
+  console.log("here")
     // try {
       const lat = request.query.lat;
       const lon = request.query.lon;
@@ -19,10 +20,15 @@ const getWeather = (error, request, response, next) => {
         lon: lon,
       }
       
-        axios.get(url, {params})   
+        const result = axios.get(url, {params})   
           .then(weatherApiData => weatherApiData.data.data.map(obj => new Forecast(obj)))
-          .then(results => response.send(results))
-          .catch(next(error))
+          .then(results => {
+            response.send(results)
+            console.log(results);
+            return results;
+          })
+          .catch(error => next(error));
+        console.log('weather');
 }
 
 class Forecast{
