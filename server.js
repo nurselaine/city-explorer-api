@@ -53,6 +53,8 @@ class Error{
 
 // ********************* listener **********************
 
+// error handler=demo app.use for error
+
 app.listen(PORT, () => console.log(PORT)); // testing port in terminal
 
 // server is listening for routes which are used to access endpoints aka data needed from api
