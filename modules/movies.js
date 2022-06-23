@@ -11,6 +11,7 @@ const getMovies = async (req, res, next) => {
     let movieResults = [];
     const city = req.query.query;
     let url = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_API_KEY}&language=en-US&query=${city}`;
+    console.log(url);
     let movieData = await axios.get(url);
     movieData = movieData.data;
     let sanitizeData = movieData.results.forEach(obj => {

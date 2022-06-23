@@ -22,13 +22,8 @@ const getWeather = (request, response, next) => {
       
         const result = axios.get(url, {params})   
           .then(weatherApiData => weatherApiData.data.data.map(obj => new Forecast(obj)))
-          .then(results => {
-            response.send(results)
-            console.log(results);
-            return results;
-          })
+          .then(results => response.send(results))
           .catch(error => next(error));
-        console.log('weather');
 }
 
 class Forecast{

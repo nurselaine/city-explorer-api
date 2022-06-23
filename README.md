@@ -16,7 +16,7 @@
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
-Name of feature: Setting up server
+## Name of feature: Setting up server
 
 Estimate of time needed to complete: 30 min
 
@@ -28,7 +28,7 @@ Actual time needed to complete: 30 min
 
 Name of feature: Set up weather data
 
-Estimate of time needed to complete: Create weather info on server and render on front-end
+## Estimate of time needed to complete: Create weather info on server and render on front-end
 
 Start time: 5:0pm
 
@@ -36,7 +36,7 @@ Finish time: 10:45
 
 Actual time needed to complete: 3.5 hours
 
-Name of feature: Create Error messages 
+## Name of feature: Create Error messages 
 
 Estimate of time needed to complete: 1hr
 
@@ -75,6 +75,15 @@ Finish time: 10:50
 
 Actual time needed to complete: 20 min
 
+## Name of feature: Refactor server.js into modules
+Estimate of time needed to complete: 30 min
+
+Start time: 11:30am
+
+Finish time: 12:00am
+
+Actual time needed to complete: 30min
+
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
@@ -90,3 +99,7 @@ Actual time needed to complete: 20 min
 3. Falashade Greene - WRRCA Model 3.0
 
 ![WRRCA Model](./my-first-board.jpg)
+
+4. Stephanie Hill - WRRCA Model 4.0
+
+![WRRCA Model](./WRRClab09.jpeg)
