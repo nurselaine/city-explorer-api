@@ -1,11 +1,6 @@
 'use strict';
-
-// ******************* REQUIRES *******************
-
-// const { response, request } = require('express');
-const express = require('express'); // create instance of express
 const axios = require('axios');
-const weatherData = require('./data/weather.json');
+const express = require('express');
 const cors = require('cors');
 const { title } = require('process');
 require('dotenv').config(); // import dotenv 
@@ -13,49 +8,28 @@ const PORT = process.env.PORT || 3002; // check to make sure working on correct 
 
 const app = express();
 app.use(cors());
-let getWeather = require('./modules/weather');
-let getMovies = require('./modules/movies');
 
-// ******************  ROUTES   *************************
+const weather = require('./modules/weather.js');
+let getMovies = require('./modules/movies');
+const cache = require('./modules/cache');
 
 app.get('/', (request,response) => {
   response.send(`hello ${PORT}`);
 })
 
-const getTest = (request, response, next) => {
-  console.log("hey");
-  return "hi"
-}
-
-app.get('/test', getTest)
-
-app.get('/weather', getWeather);
-
+app.get('/weather', weather);
 app.get('/movies', getMovies);
 
-// star(catch all) route
-app.get('*', (request, response) => {
-  let errorMessage = `Error 500: Internal Server Error`;
-  response.send(new Error(errorMessage, 500));
-});
 
-// ************************ CLASSES **************** 
+// function weatherHandler(request, response) {
+//   const lat = req.query.lat;
+//   const lon = req.query.lon;
+//   weather(lat, lon)
+//   .then(summaries => response.send(summaries))
+//   .catch((error) => {
+//     console.error(error);
+//     response.status(200).send('Sorry. Something went wrong!')
+//   });
+// } 
 
-class Error{
-  constructor(message, code){
-    this.errorMessage = message;
-    this.statusCode = code;
-  }
-
-  toString() {
-    return `Error ${this.statusCode}: ${this.errorMessage}`
-  }
-}
-
-// ********************* listener **********************
-
-// error handler=demo app.use for error
-
-app.listen(PORT, () => console.log(PORT)); // testing port in terminal
-
-// server is listening for routes which are used to access endpoints aka data needed from api
+app.listen(process.env.PORT, () => console.log(`Server up on ${process.env.PORT}`));

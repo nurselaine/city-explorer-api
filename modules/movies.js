@@ -5,21 +5,34 @@ require('dotenv').config(); // import dotenv
 
 const app = express();
 app.use(cors());
+let cache = require('./cache.js');
 
 const getMovies = async (req, res, next) => {
   try {
     let movieResults = [];
     const city = req.query.query;
-    let url = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_API_KEY}&language=en-US&query=${city}`;
-    console.log(url);
-    let movieData = await axios.get(url);
-    movieData = movieData.data;
-    let sanitizeData = movieData.results.forEach(obj => {
+    const key = `${city}-movies`
+    const timeToCache = 1000 * 60 * 60 * 24 * 30;
+
+    if (cache[key] && (Date.now() - cache[key].timestamp < timeToCache)) {
+      console.log('cache hit');
+      res.status(200).send(cache[key].data);
+    } else {
+      console.log('cache miss');
+
+      cache[key] = {};
+      cache[key].timestamp = Date.now();
+      let url = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_API_KEY}&language=en-US&query=${city}`;
+      cache[key].data = await axios.get(url);
+      let movieData = cache[key].data.data;
+      let sanitizeData = movieData.results.forEach(obj => {
       movieResults.push(
         new Movie(obj.title, obj.overview, obj.vote_average, obj.vote_count, obj.poster_path, obj.popularity, obj.release_date)
       )
     })
-    res.send(movieResults);
+    cache[key].data = movieResults;
+    res.status(200).send(movieResults);
+    }
   } catch (error) {
     next(error);
   }
